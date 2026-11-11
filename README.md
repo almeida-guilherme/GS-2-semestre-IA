@@ -71,6 +71,8 @@ A busca é por **palavras-chave com pontuação**: palavra específica (rg, cnh,
 
 **Um agente só.** A tarefa é uma só: responder a partir das fichas. Separar em vários agentes (ex.: um classificador e um redator) multiplicaria as chamadas ao modelo, que roda local e leva cerca de 15 s por resposta. As partes que poderiam ser "outro agente" (validação, busca, privacidade) são regras simples e funcionam melhor como código comum.
 
+**Acessibilidade (testada no navegador):** dá para usar tudo só com o teclado (Tab, setas no menu de assuntos, Enter para enviar), com contorno amarelo de foco bem visível. Tiramos do caminho do Tab o que não serve ao cidadão (barra do Streamlit e links dos títulos). Fonte de 19px, texto quase preto sobre fundo branco e frases curtas.
+
 **Modelo: Qwen 3.5 9B pelo Ollama.** Roda no notebook do grupo (GTX 1660 Ti, 6 GB), sem custo e sem chave. O motivo principal é a **privacidade**: as perguntas não saem do computador, então nenhum dado é enviado a serviço externo. É um modelo recente, com bom português, e já estava instalado. Desligamos o modo de "pensamento" (`reasoning=False`) para cada resposta levar cerca de 15 s, e não mais de um minuto. Temperatura 0 para respostas repetíveis.
 
 **Onde entra a IA e onde não entra:**
@@ -137,3 +139,4 @@ Roteiro, tarefas e questionário em [`testes_usuarios/roteiro.md`](testes_usuari
 - O juiz usa o mesmo modelo do agente, o que pode deixá-lo mais "bonzinho". Por isso conferimos uma amostra manualmente e somamos regras fixas (citação e vazamento de CPF).
 - Cada resposta leva de 10 a 30 s na nossa máquina (modelo local sem GPU dedicada forte).
 - Só português.
+- O Streamlit marca a página como inglês (`lang="en"`). Corrigimos para `pt-BR` com um script no `app.py` (ajuda o leitor de tela), mas a correção roda depois do carregamento: um Chrome configurado para **traduzir inglês automaticamente** pode "traduzir" o português e estragar textos (no nosso teste, o botão "Perguntar" virou "r"). Nesse caso, use o ícone de tradução do Chrome e escolha "Nunca traduzir este site".

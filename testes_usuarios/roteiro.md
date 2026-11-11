@@ -10,6 +10,8 @@ Mínimo de **5 pessoas de fora do grupo**. Cada sessão leva uns 10 minutos.
 
 **O que NÃO anotar:** nome, idade exata, telefone, e-mail, foto ou gravação do rosto. Anotar só o código (P1, P2...), o tempo, se acertou e as notas.
 
+**Antes de cada sessão:** abra http://localhost:8510 e confira se o título é "Citizen Assist AI". Se aparecer "IA de Assistência ao Cidadão", o Chrome está traduzindo a página: clique no ícone de tradução da barra de endereço e escolha "Nunca traduzir este site".
+
 ## As 3 tarefas
 
 Cronometrar do momento em que a pessoa termina de ler a tarefa até ela falar a resposta. Pode usar o menu ou escrever.

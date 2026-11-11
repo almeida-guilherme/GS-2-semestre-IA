@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 
 from agente import FICHAS, criar_agente, perguntar
 from fichas import CATEGORIAS
@@ -27,6 +28,20 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, [role="radio"
 </style>
 """, unsafe_allow_html=True)
 
+# o Streamlit marca a página como inglês (lang="en"); o Chrome então "traduz" o português
+# e o leitor de tela lê com pronúncia errada. Corrigimos o idioma da página.
+components.html("""
+<script>
+const doc = window.parent.document.documentElement;
+doc.lang = "pt-BR";
+doc.setAttribute("translate", "no");
+doc.classList.add("notranslate");
+// este iframe é invisível: tira ele da ordem do Tab e do leitor de tela
+window.frameElement.tabIndex = -1;
+window.frameElement.setAttribute("aria-hidden", "true");
+</script>
+""", height=0)
+
 
 @st.cache_resource
 def carregar_agente():
@@ -35,7 +50,7 @@ def carregar_agente():
 
 agente = carregar_agente()
 
-st.title("Citizen Assist AI")
+st.title("Citizen Assist AI", anchor=False)
 st.write("Tire dúvidas sobre RG, CPF, título de eleitor, carteira de trabalho, certidões e CNH.")
 st.warning("**Não escreva dados pessoais** (CPF, RG, telefone, endereço, e-mail). "
            "Eu não preciso deles. Este é um protótipo educacional, não um canal oficial.")
@@ -51,7 +66,7 @@ def responder(texto):
     st.session_state.resposta = saida["resposta"]
 
 
-st.header("1. Escolha um assunto")
+st.header("1. Escolha um assunto", anchor=False)
 codigo = st.radio("Assunto", list(CATEGORIAS), format_func=lambda c: CATEGORIAS[c], horizontal=True)
 for i, pergunta in enumerate(PERGUNTAS_MENU[codigo]):
     if st.button(pergunta, key=f"{codigo}-{i}"):
@@ -59,7 +74,7 @@ for i, pergunta in enumerate(PERGUNTAS_MENU[codigo]):
 with st.expander("Ver a ficha completa"):
     st.markdown(FICHAS[codigo]["texto"])
 
-st.header("2. Ou escreva sua pergunta")
+st.header("2. Ou escreva sua pergunta", anchor=False)
 with st.form("pergunta", clear_on_submit=True):
     texto = st.text_input("Sua pergunta (aperte Enter para enviar)", max_chars=LIMITE_CARACTERES + 50,
                           placeholder="Ex.: Perdi meu RG. Preciso levar boletim de ocorrência?")
@@ -67,5 +82,5 @@ with st.form("pergunta", clear_on_submit=True):
         responder(texto)
 
 if st.session_state.resposta:
-    st.header("Resposta")
+    st.header("Resposta", anchor=False)
     st.markdown(st.session_state.resposta)
