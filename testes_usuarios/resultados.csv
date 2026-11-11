@@ -1,1 +1,6 @@
-participante,usou,t1_tempo_s,t1_acertou,t2_tempo_s,t2_acertou,t3_tempo_s,t3_acertou,q1,q2,q3,q4,q5,comentario
+participante,usou,t1_tempo_s,t1_acertou,t2_tempo_s,t2_acertou,t3_tempo_s,t3_acertou,q1,q2,q3,q4,q5,comentario,observacao
+P1,os dois,40,1,49,1,90,1,5,5,4,3,5,"A maioria das perguntas estava em locais de fácil acesso. Apenas a última que fiquei em dúvida onde procurar",
+P2,menu,57,1,52,1,130,0,5,3,3,4,1,,"Na T3 o facilitador precisou ajudar; contada como erro"
+P3,os dois,20,1,34,1,35,1,5,5,5,5,4,"Gostei muito do aplicativo, mas confesso que não estou acostumada",
+P4,texto,39,1,34,1,32,1,5,5,4,4,5,"Já estou acostumado a usar outros modelos, logo preferi escrever tudo pois sabia que ia ser mais eficaz",
+P5,texto,30,1,33,1,31,1,5,5,5,5,5,,

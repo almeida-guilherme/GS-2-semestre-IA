@@ -32,4 +32,4 @@ Notas de 1 (discordo totalmente) a 5 (concordo totalmente):
 4. Ficou claro de onde vinha a informação (ficha e data).
 5. Eu usaria o assistente de novo.
 
-Anotar tudo em `resultados.csv` e rodar `python testes_usuarios/indicadores.py`.
+Anotar tudo na folha impressa (`folha_anotacao.pdf`), passar para `resultados.csv` (uma linha por pessoa; acertou = 1 ou 0; notas de 1 a 5) e rodar `.venv/bin/python testes_usuarios/indicadores.py`. O script confere a planilha e atualiza a seção de testes do README.

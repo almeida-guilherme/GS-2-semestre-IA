@@ -127,9 +127,59 @@ Detalhes, régua do juiz e todas as respostas em [`avaliacao.ipynb`](avaliacao.i
 
 ## Testes com usuários
 
-Roteiro, tarefas e questionário em [`testes_usuarios/roteiro.md`](testes_usuarios/roteiro.md). Os resultados ficam em `testes_usuarios/resultados.csv` e os indicadores saem com `python testes_usuarios/indicadores.py`.
+Roteiro, tarefas e questionário em [`testes_usuarios/roteiro.md`](testes_usuarios/roteiro.md). Os dados ficam em `testes_usuarios/resultados.csv` e a seção abaixo é gerada a partir deles com `.venv/bin/python testes_usuarios/indicadores.py`.
 
-<!-- TESTES COM USUÁRIOS: preencher depois dos testes -->
+<!-- testes:inicio -->
+Participantes: **5** pessoas de fora do grupo, identificadas só como P1 a P5.
+
+**Tempo para encontrar a informação e acerto**
+
+| Tarefa | Tempo médio | Mediana | Mín–máx | Acertos |
+|---|---|---|---|---|
+| T1: o que levar para a 2ª via do RG (perda) | 37 s | 39 s | 20–57 s | 5/5 |
+| T2: preço e prazo da certidão pelo portal | 40 s | 34 s | 33–52 s | 5/5 |
+| T3: atendimento aos sábados | 64 s | 35 s | 31–130 s | 4/5 |
+
+Acerto geral nas tarefas: **14/15 (93%)**.
+
+**Facilidade de uso** (1 = discordo totalmente, 5 = concordo totalmente)
+
+| Afirmação | Média | Notas |
+|---|---|---|
+| Foi fácil encontrar a informação | 5,0 | 5, 5, 5, 5, 5 |
+| Linguagem fácil de entender | 4,6 | 5, 3, 5, 5, 5 |
+| Confiaria nas orientações | 4,2 | 4, 3, 5, 4, 5 |
+| Ficou claro de onde vinha a informação | 4,2 | 3, 4, 5, 4, 5 |
+| Usaria de novo | 4,0 | 5, 1, 4, 5, 5 |
+
+Média geral: **4,4 de 5**.
+
+**Destaques**
+
+- Tarefa mais demorada: T3: atendimento aos sábados (média de 64 s).
+- Afirmação com a menor nota: "Usaria de novo" (4,0).
+- Como usaram: os dois (2), texto (2), menu (1).
+
+**Comentários dos participantes**
+
+- "A maioria das perguntas estava em locais de fácil acesso. Apenas a última que fiquei em dúvida onde procurar"
+- "Gostei muito do aplicativo, mas confesso que não estou acostumada"
+- "Já estou acostumado a usar outros modelos, logo preferi escrever tudo pois sabia que ia ser mais eficaz"
+
+**Observações do facilitador**
+
+- P2: Na T3 o facilitador precisou ajudar; contada como erro
+<!-- testes:fim -->
+
+**O que os testes mostraram**
+
+- **O problema está na T3 (sábado), e só para quem usou o menu.** Quem digitou a pergunta achou a resposta em 31 a 35 s. Quem procurou pelo menu demorou 90 s (P1) ou precisou de ajuda (P2). A informação de horário fica na categoria "Atendimento e regras gerais", e o nome não indica que ali tem horário. O comentário do P1 diz o mesmo: ficou "em dúvida onde procurar" na última tarefa.
+- **Quem digita é mais rápido e mais constante.** P4 e P5 usaram só o campo de texto e ficaram entre 30 e 39 s nas três tarefas. Nos dois casos, uns 10 a 20 s são a espera da resposta do modelo.
+- **A menor nota foi "usaria de novo" (4,0),** puxada por um participante (nota 1). Ele também deu as notas mais baixas para linguagem (3) e confiança (3) e foi o único que precisou de ajuda. É uma pessoa só, então não dá para generalizar, mas combina com o público que a análise de Estatística da GS aponta como o que mais fica de fora do digital.
+
+**Melhoria que os testes sugerem (ainda não feita):** trocar o nome da categoria "Atendimento e regras gerais" para algo como "Horários, agendamento e atendimento" e repetir os testes de T3 com quem usa o menu.
+
+**Limitações do teste:** foram 5 pessoas próximas ao facilitador (familiares e amigos), o que pode deixar as notas mais altas por simpatia. Por exemplo, todos deram 5 em "foi fácil encontrar", apesar das dificuldades na T3. Cada pessoa fez uma sessão, e os tempos incluem a espera do modelo local.
 
 ## Limitações
 
