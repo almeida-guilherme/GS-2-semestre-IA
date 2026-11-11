@@ -1,0 +1,27 @@
+id,manual_v1,manual_v2,manual_v3,manual_v4,observacao
+1,incorreto,parcial,correto,correto,"v1 inventou ""pode ser pago no balcão""; v2 tirou a forma de pagamento (guia no portal)"
+2,parcial,correto,correto,correto,"v1 citou só a FC-07, mas a resposta veio da FC-01"
+3,correto,correto,correto,correto,
+4,correto,correto,correto,correto,
+5,correto,correto,correto,correto,
+6,correto,parcial,parcial,parcial,"v2 e v3 sem ""documento original com foto""; na v3 o juiz chamou de inventado um trecho que está na FC-01 (falso negativo do juiz)"
+7,parcial,parcial,correto,correto,"v1 sem ""sem agendamento""; v2 sem ""gratuito"" e ""sem agendamento"""
+8,correto,correto,correto,correto,
+9,correto,parcial,correto,correto,"v2 sem ""obrigatório de 18 a 69"""
+10,correto,correto,correto,correto,
+11,correto,correto,correto,correto,
+12,correto,correto,correto,correto,
+13,correto,parcial,correto,correto,"v2 respondeu só o valor, sem o prazo de 3 dias úteis"
+14,correto,incorreto,correto,correto,"v2 inventou ""documento da pessoa que autoriza"""
+15,correto,correto,correto,correto,
+16,correto,correto,correto,correto,
+17,correto,correto,correto,correto,
+18,correto,correto,correto,correto,
+19,incorreto,correto,correto,correto,"v1 inventou agendamento no balcão e ""sem taxa extra"""
+20,correto,correto,correto,correto,resposta fixa
+21,correto,correto,correto,correto,resposta fixa
+22,parcial,correto,parcial,correto,"v1 e v3 dizem que não consultam, mas depois explicam a inscrição do CPF, que não foi perguntada; v4 usa o prompt curto nesse caso e acerta"
+23,incorreto,correto,incorreto,correto,"v1 e v3 mandam gerar a guia de R$ 38,00 para ""agendar meu RG"" (esse valor é só da segunda via); v4 usa o prompt curto nesse caso e acerta"
+24,correto,correto,correto,correto,resposta fixa
+25,correto,correto,correto,correto,
+26,correto,correto,correto,correto,resposta fixa
